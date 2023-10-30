@@ -6,9 +6,44 @@
     <title>Document</title>
 
     <style>
+        header {
+            text-align: center;
+            font-size:2em;
+            margin:0 0 50px;
+        }
+        header h2 {
+            color:lightcoral;
+            margin-top:3em;
+        }
+
+        header p {
+            color:lightpink;
+            margin-top:-1em;
+        }
         
-        
-        
+        main {
+            margin:0 0 40px;
+            text-align: center;    
+        }
+
+        label.title {
+            font-weight: bold;
+            width:80px;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        button {
+            background-color: white;
+            border:1px solid black;
+        }
+
+        button:hover {
+            background-color: lightpink;
+        }
+
     </style>
 
 </head>
@@ -27,17 +62,11 @@
 
     <!-- 메인화면 -->
     <main>
-        <table>
-            <tr>
-                <th>아이디</th>
-                <td rowspan="2">로그인</td>
-            </tr>
+        <div><label for="userId" class="title">아이디</label>
+        <input type="text" id="userId"></div>
 
-            <tr>
-                <th>비밀번호</th>
-            </tr>
-        </table>
-
+        <div><label for="userpw" class="title">비밀번호</label>
+        <input type="password" id="userpw"></div>
     </main>
 
     <!-- 사이드 -->
@@ -48,7 +77,8 @@
 
     <!-- 하단 -->
     <footer>
-
+        <button id="whatId">아이디찾기</button>
+        <button id="whatPw">비밀번호찾기</button>
 
     </footer>
 </body>
