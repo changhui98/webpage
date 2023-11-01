@@ -46,7 +46,11 @@
             text-align:center;
         }
 
-    aside {
+        nav a:hover {
+            color:red;
+        }
+
+    aside#side-left {
         width: 20%;
         height: 650px;
         border-right:1px solid gray;
@@ -54,8 +58,9 @@
     }
 
     main {
-        width: 80%;
+        width: 59%;
         height: 650px;
+        float:left;
         
     }
 
@@ -66,6 +71,18 @@
         border-top:1px solid gray;
     }
 
+    li {
+        list-style:none;
+    }
+
+    aside#side-right { 
+        border-left:1px solid black;
+        width:20%;
+        height:650px;
+        float:left;
+    }
+
+    
 
 
 
