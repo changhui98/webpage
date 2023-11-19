@@ -9,6 +9,8 @@
 <title>Insert title here</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
+
+
 </head>
 <body>
 <%
@@ -35,7 +37,7 @@
   <tbody>
     <tr>
       <th scope="row"><%=dto.getNum() %></th>
-      <td><a href=""><%=dto.getTitle() %></a> </td>
+      <td><a href="/BoardView?num=<%=dto.getNum()%>"><%=dto.getTitle() %></a> </td>
       <td><%=dto.getContent() %> </td>
       <td><%=dto.getId() %> </td>
       <td><%=dto.getPostdate() %> </td>
@@ -47,8 +49,7 @@
   </tbody>
   
 </table>
-
-
+<%@include file="pageNav.jsp" %>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

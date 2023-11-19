@@ -3,6 +3,7 @@ package com.hui.dao;
 import java.sql.SQLException;
 
 import com.hui.common.DBConPool;
+import com.hui.dto.BoardDto;
 import com.hui.dto.MemberDto;
 
 public class MemberDao extends DBConPool{
