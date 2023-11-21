@@ -16,6 +16,7 @@
 		border: 1px solid black;
 		border-radius: 10px;
 		padding:10px;
+		background-color:lightblue;
 	}
 
 	#main {
@@ -23,7 +24,6 @@
 		margin: 0 auto;
 		border:1px solid black;
 		border-radius: 10px;
-		color:blue;
 		padding:20px;
 	}
 	

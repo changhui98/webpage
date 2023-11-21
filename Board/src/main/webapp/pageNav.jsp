@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,15 +25,19 @@
       <a class="page-link">Previous</a>
     </li>
   <!-- 앞으로 가기 버튼 종료 -->
-      
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">2</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <% 
+	for(int i = startNo; i <= endNo; i++){    
+	%>
+    <li class="page-item"><a class="page-link" href="#"><%=i %></a></li>
+    
+    
+    
+    <%} %>
+    <!-- 뒤로가기 버튼 시작 -->
     <li class="page-item">
       <a class="page-link" href="#">Next</a>
     </li>
+    <!-- 뒤로가기 버튼 종료 -->
   </ul>
 </nav>
 
