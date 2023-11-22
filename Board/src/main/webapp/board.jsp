@@ -36,7 +36,7 @@
 <%for (BoardDto dto : list){ %>
   <tbody>
     <tr>
-      <th scope="row"><%=dto.getNum() %></th>
+      <th><%=dto.getNum() %></th>
       <td><a href="/BoardView?num=<%=dto.getNum()%>"><%=dto.getTitle() %></a> </td>
       <td><%=dto.getContent() %> </td>
       <td><%=dto.getId() %> </td>
