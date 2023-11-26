@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,14 +25,17 @@
       <a class="page-link">Previous</a>
     </li>
   <!-- 앞으로 가기 버튼 종료 -->
+  
+  
+  <c:forEach begin="" end="" var=""></c:forEach>
     <% 
 	for(int i = startNo; i <= endNo; i++){    
 	%>
     <li class="page-item"><a class="page-link" href="#"><%=i %></a></li>
     
-    
-    
     <%} %>
+    
+    
     <!-- 뒤로가기 버튼 시작 -->
     <li class="page-item">
       <a class="page-link" href="#">Next</a>
