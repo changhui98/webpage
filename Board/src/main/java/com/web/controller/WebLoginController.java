@@ -32,6 +32,8 @@ public class WebLoginController extends HttpServlet {
 		
 		if(dto != null ) {
 			session.setAttribute("id", dto.getId());
+			session.setAttribute("name", dto.getName());
+			session.setAttribute("regidate", dto.getRegidate());
 			session.setAttribute("dto", dto);
 			
 			response.sendRedirect("/BList");
