@@ -5,8 +5,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MyPage</title>
+<title>도서 목록</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
 <style>
 	#header {
@@ -69,6 +70,7 @@
 </style>
 
 <body>
+
 <script>
 	window.onload = function(){
 		
@@ -81,7 +83,6 @@
 		book.onclick = function(){
 			alert('도서 페이지로 이동합니다.')
 			location.href='/BookList'
-			book.submit()
 		}
 		
 		let file = document.querySelector("#fileBtn")
@@ -99,7 +100,7 @@
 
 
 <div id="header">
-	<h2>My Page </h2>
+	<h2>Book Page</h2>
 	
 </div>
 
@@ -109,20 +110,16 @@
 			<tr class="table-info">
 				<th>*</th>
 				<th>제목</th>
-				<th>내용</th>
-				<th>작성자</th>
-				<th>작성일</th>
-				<th>조회수</th>
+				<th>대여정보</th>
+				<th>작가</th>
 			</tr>
 			
-			<c:forEach items="${list }" var="dto">
+			<c:forEach items="${book }" var="book">
 			<tr>
-				<td>${dto.num }</td>
-				<td><a href="/WebView?num=${dto.num }">${dto.title }</a></td>
-				<td>${dto.content }</td>
-				<td>${dto.id }</td>
-				<td>${dto.postdate }</td>
-				<td>${dto.visitcount }</td>
+				<td>${book.no }</td>
+				<td>${book.title }</td>
+				<td>${book.rentyn }</td>
+				<td>${book.author }</td>
 			</tr>
 			</c:forEach>
 			
@@ -137,8 +134,6 @@
 				<li>이름 : ${name }</li>
 				<li>가입날짜 : ${regidate }</li>
 			</ul>
-		</div>
-		<div>
 			<button type="button" class="btn btn-outline-info"
 			id="logoutBtn">LOGOUT</button>
 			<button type="button" class="btn btn-outline-info">MyPage</button>
@@ -146,15 +141,11 @@
 		
 		<h2>MENU</h2>
 		<div>
-			<div class="menuBtn">
-				<button type="button" 
-				class="btn btn-outline-info" 
-				id="bookBtn">Book List</button>
+			<div>
+				<button type="button" class="btn btn-outline-info" id="bookBtn">Book List</button>
 			</div>
-			<div class="menuBtn">
-				<button type="button" 
-				class="btn btn-outline-info" 
-				id="fileBtn">File List</button>
+			<div>
+				<button type="button" class="btn btn-outline-info" id="fileBtn">File List</button>
 			</div>
 			<div>
 				<button type="button" class="btn btn-outline-info" id="backBtn">Main Page</button>

@@ -57,8 +57,14 @@ public class BoardDao extends DBConPool{
 
 	public List<BoardDto> getList(){
 		List<BoardDto> list = new ArrayList<>();
-		String sql = "select  *\r\n"
-					+ "from    board";
+		String sql = "select *\r\n"
+					+ "from(   select rownum rnum, b.*\r\n"
+					+ "        from(   select  *\r\n"
+					+ "                from    board\r\n"
+					+ "                order by num desc\r\n"
+					+ "        )b\r\n"
+					+ "    )\r\n"
+					+ "where rnum between 1 and 15";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
