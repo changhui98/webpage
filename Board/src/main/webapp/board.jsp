@@ -29,11 +29,13 @@
 	}
 
 	#main {
-		width:100%
+		width:100%;
+		
 	}
 
 	#container {
 		width:60%;
+		height:700px;
 		margin-left:15%;
 		display: inline;
 		float:left;
@@ -108,6 +110,10 @@
 
 <div id="main">
 	<div id="container">
+		<div>
+			<button>버튼</button>
+		</div>
+	
 		<table class="table">
 			<tr class="table-info">
 				<th>*</th>

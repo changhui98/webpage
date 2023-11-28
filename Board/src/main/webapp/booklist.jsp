@@ -30,11 +30,12 @@
 	}
 
 	#main {
-		width:100%
+		width:100%;
 	}
 
 	#container {
 		width:60%;
+		height:700px;
 		margin-left:15%;
 		display: inline;
 		float:left;
