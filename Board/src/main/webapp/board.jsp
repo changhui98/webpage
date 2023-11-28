@@ -75,6 +75,9 @@
 		let logout = document.querySelector("#logoutBtn")
 		logout.onclick = function(){
 			alert('로그아웃 합니다.')
+			location.href='/Logout'
+			logout.method='get'
+			logout.submit()
 		}
 		
 		let book = document.querySelector("#bookBtn")
